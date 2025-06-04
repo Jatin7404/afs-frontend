@@ -15,7 +15,7 @@ export function AuthProvider({ children }) {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("http://localhost:5000/api/auth/verify", {
+        .get("https://afs-backend-x5k5.onrender.com/api/auth/verify", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
